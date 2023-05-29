@@ -1,0 +1,52 @@
+<h2>Inventories</h2>
+
+<form [formGroup]="form" (ngSubmit)="addToCart()">
+  <tr style="width: 100%">
+    <th>Image</th>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>Description</th>
+  </tr>
+  <table style="width: 100%">
+    <div *ngFor="let i of inventories" (click)="selectItem(i.id)">
+      <td>
+        <img src="{{ i.image }}" width="50" height="50" />
+      </td>
+
+      <td class="align-middle">{{ i.id }}</td>
+      <td class="align-middle">{{ i.title }}</td>
+      <td class="align-middle">${{ i.price }}</td>
+      <td class="align-middle">{{ i.category }}</td>
+      <td class="align-middle">{{ i.description }}</td>
+    </div>
+  </table>
+
+  <table>
+    <tr>
+      <td>Item:</td>
+      <td>
+        <input type="text" readonly formControlName="id" />
+      </td>
+    </tr>
+    <tr>
+      <td>Unit Price: $</td>
+      <td>
+        <input type="number" readonly formControlName="price" />
+      </td>
+    </tr>
+    <tr>
+      <td>Quantity:</td>
+      <td>
+        <input type="number" min="1" formControlName="quantity" />
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="submit" [disabled]="form.invalid">Add to Cart</button>
+      </td>
+    </tr>
+  </table>
+</form>

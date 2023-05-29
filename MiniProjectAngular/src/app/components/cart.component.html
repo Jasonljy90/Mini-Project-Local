@@ -1,0 +1,13 @@
+<h2>Cart</h2>
+<tr *ngFor="let c of contents">
+  <td>
+    <code>Item: {{ c.item }} </code>
+    <code>Unit Price: ${{ c.unitPrice }} </code>
+    <code>Quantity: {{ c.quantity }} </code>
+  </td>
+</tr>
+
+<h3>Total Price</h3>
+<td>${{ getSum() }}</td>
+
+<button (click)="payment()">Checkout</button>

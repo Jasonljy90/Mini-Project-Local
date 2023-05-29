@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>Jason's Travel App</div>
+  <nav>
+    <span
+      routerLink="/login"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      >Login</span
+    >
+    <span
+      routerLink="/signup"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      >Sign Up</span
+    >
+    <span
+      routerLink="/reset/password"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      >Forget Password</span
+    >
+  </nav>
+</mat-toolbar>
+
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>

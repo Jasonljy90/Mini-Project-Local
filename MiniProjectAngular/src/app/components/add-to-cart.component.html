@@ -1,0 +1,6 @@
+<div class="side-by-side">
+  <app-shopping-products
+    (onNewItem)="addItemToCart($event)"
+  ></app-shopping-products>
+  <app-cart [contents]="contents"></app-cart>
+</div>

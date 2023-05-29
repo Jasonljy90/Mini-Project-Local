@@ -1,0 +1,18 @@
+<h2>Verify Email!</h2>
+
+<form [formGroup]="verifyEmailOtpForm" (ngSubmit)="verifyEmailOtp()">
+  <table>
+    <tr>
+      <td>Enter your username:</td>
+      <td><input type="text" formControlName="username" /></td>
+    </tr>
+    <tr>
+      <td>Enter the OTP sent to your email:</td>
+      <td><input type="text" formControlName="otp" /></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button type="submit">Verify Email</button></td>
+    </tr>
+  </table>
+</form>

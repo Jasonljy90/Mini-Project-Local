@@ -1,0 +1,36 @@
+<table class="table-primary">
+  <thead class="table-dark">
+    <tr>
+      <td></td>
+      <th>Currency Name</th>
+      <th>Currency Symbol</th>
+      <th>Land Area (Km/SQ)</th>
+      <th>Capital</th>
+      <th>Region</th>
+      <th>Sub Region</th>
+      <th>Language</th>
+      <th>Map</th>
+      <th>Population</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <td class="align-middle">
+      <img src="{{ countryInfomation.flags }}" height="50" />
+    </td>
+    <td class="align-middle">{{ countryInfomation.currencyName }}</td>
+    <td class="align-middle">{{ countryInfomation.currencySymbol }}</td>
+    <td class="align-middle">{{ countryInfomation.area }}</td>
+    <td class="align-middle">{{ countryInfomation.capital }}</td>
+    <td class="align-middle">{{ countryInfomation.region }}</td>
+    <td class="align-middle">{{ countryInfomation.subregion }}</td>
+    <td class="align-middle">{{ countryInfomation.languages }}</td>
+    <td class="align-middle">
+      <a target="_blank" href="{{ countryInfomation.maps }}">Map</a>
+    </td>
+    <td class="align-middle">{{ countryInfomation.population }}</td>
+  </tbody>
+</table>
+
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>

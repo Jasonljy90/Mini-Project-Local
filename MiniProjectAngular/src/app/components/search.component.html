@@ -1,0 +1,12 @@
+<h2>Search your country of interest here!</h2>
+
+<form [formGroup]="searchForm" (ngSubmit)="search()">
+  <select class="form-select form-select-sm mb-3" formControlName="countryName">
+    <option value="">Choose Country</option>
+    <option *ngFor="let country of countries" value="{{ country }}">
+      {{ country }}
+    </option>
+  </select>
+  <td></td>
+  <td><button type="submit">Search</button></td>
+</form>

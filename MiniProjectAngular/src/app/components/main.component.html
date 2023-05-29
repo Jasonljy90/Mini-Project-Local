@@ -1,0 +1,46 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="over" [(opened)]="opened">Sidenav</mat-sidenav>
+  <mat-sidenav-content>
+    <nav>
+      <span
+        routerLink="/change/password"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Change Password</span
+      >
+      <span
+        routerLink="/livechat"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Live Chat</span
+      >
+      <span
+        routerLink="/searchhistory"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Search History</span
+      >
+      <span
+        routerLink="/shopping/search"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Search Products</span
+      >
+      <span
+        routerLink="/search"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Search Country Info</span
+      >
+      <span
+        routerLink="/shopping/order/history"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Order History</span
+      >
+    </nav>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
